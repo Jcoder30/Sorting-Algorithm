@@ -55,14 +55,16 @@ def sort_from_least_to_greatest(n):
 
 
 # generating a list of random numbers
-def random_int(n):
+def random_int(n1, n2):
     output = []
-    for i in range(0, n):
-        rand = random.randint(0, n)
+    for i in range(n1, n2):
+        rand = random.randint(n1, n2)
         output.append(rand)
     return output
 
-
-numbers = random_int(10)
-print(sort_from_greatest_to_least(numbers))
-print(sort_from_least_to_greatest(numbers))
+start = 1
+finish = 25
+numbers = random_int(start, finish)
+print('Random numbers from', start, 'to', finish, ': \n', numbers)
+print('Sorted from greatest to least: \n', sort_from_greatest_to_least(numbers))
+print('Sorted from least to greatest: \n', sort_from_least_to_greatest(numbers))
